@@ -88,7 +88,7 @@ const AppNavigator = () => {
 			children: [
 				{
 					path: '/',
-					element: <Dashboard />,
+					element: <PunchyPortal />,
 				},
 				{
 					path: '/tannerOnboarding',
