@@ -5,6 +5,7 @@ import tannerOnboardingAPI from 'APICalls/tannerOnboardingAPI';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { IconChevronLeft, IconChevronRight } from 'assets/icons';
+import { min, max } from 'lodash';
 
 const PunchyPortal = () => {
 	const navigate = useNavigate();
@@ -54,7 +55,7 @@ const PunchyPortal = () => {
 					{/* Right Column */}
 					<div
 						className={`col-3 bg-punchy-gray ${isRightColumnVisible ? '' : 'd-none'
-							}`}
+						}`}
 					>
 						<div className="w-100 p-3 d-flex align-items-baseline" style={{ position: 'relative', right: '32px', top: '15px' }}>
 							<div className="d-flex align-items-baseline">
@@ -68,6 +69,16 @@ const PunchyPortal = () => {
 							</div>
 							<Checkbox isSwitch={true} className="ms-auto" style={{ position: 'relative', left: '21px' }} />
 						</div>
+						<div className="d-flex flex-column p-4">
+							<label htmlFor="voice-slider" className="me-2 pb-2">Configure voice</label>
+							<input type="range" className="mb-2 w-100" id="voice-slider" defaultValue="0" />
+							<div className="d-flex justify-content-between w-100">
+								<label htmlFor="voice-slider" className="me-2">Value 1</label>
+								<label htmlFor="voice-slider" className="ms-2">Value 2</label>
+							</div>
+						</div>
+
+
 					</div>
 				</div>
 				{/** Toggle Open */}

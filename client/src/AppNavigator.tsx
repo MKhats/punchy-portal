@@ -74,7 +74,6 @@ const AppNavigator = () => {
 		<AppHistoryTrackerProvider>
 			<TrackerWrapper>
 				<React.Fragment>
-					<PunchyPortal />
 					<Outlet /> {/* This is where the nested routes will render */}
 				</React.Fragment>
 			</TrackerWrapper>
