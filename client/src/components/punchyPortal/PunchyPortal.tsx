@@ -5,9 +5,65 @@ import PromptCard from './PromptCard';
 import { Controller, useForm } from 'react-hook-form';
 import PromptFilterList from './PromptFilterList';
 
+interface DataItem {
+    promptTitle: string;
+    category: string;
+    promptText: string;
+}
+
 const PunchyPortal = () => {
 	const [isRightColumnVisible, setRightColumnVisible] =
 		useState<boolean>(false);
+		const [data, setData] = useState<DataItem[]>([]);
+
+		const
+[inputText, setInputText] =
+useState
+(
+''
+);
+const
+[assertiveness, setAssertiveness] =
+useState
+(5);
+const
+[simplicity, setSimplicity] =
+useState
+(5);
+const
+[formality, setFormality] =
+useState
+(5);
+const
+[analytical, setAnalytical] =
+useState
+(5);
+const
+[enthusiasm, setEnthusiasm] =
+useState
+(5);
+const
+[apiResponse, setApiResponse] =
+useState
+(
+''
+);
+	
+		// Fetch the JSON data
+		useEffect(() => {
+			const fetchData = async () => {
+				try {
+					const response = await fetch('promptLibrary.json');
+					const json = await response.json();
+					setData(json);
+				} catch (error) {
+					console.error('Error fetching the JSON:', error);
+				}
+			};
+	
+			fetchData();
+		}, []);
+
 	const toggleRightColumn = () => {
 		setRightColumnVisible((prev) => !prev);
 	};
@@ -27,8 +83,53 @@ const PunchyPortal = () => {
 		{ value: 'Style Guide', label: 'Style Guide' },
 		{ value: 'Best Practices', label: 'Best Practices' },
 		{ value: 'Design Language', label: 'Design Language' },
-
 	];
+
+	const azureOpenAiUrl = "https://punchcard-ai.openai.azure.com/openai/deployments/punchcard-chat-gpt-4o/chat/completions?api-version=2023-03-15-preview";
+	const azureApiKey = "d89c47dba94d436cb7aa2a1cbb3f54e5"; // Replace with your actual API key
+	// Function to send prompt to the Azure OpenAI API
+	const sendPromptToAPI = async () => {
+		const requestBody = {
+			messages: [
+				{
+					role: "system",
+					content: "You are a helpful assistant for Punchcard Systems."
+				},
+				{
+					role: "user",
+					content: generatePrompt(inputText)
+				}
+			],
+			max_tokens: 1000,
+			temperature: 0.71
+		};
+		try {
+			const response = await fetch(azureOpenAiUrl, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					'api-key': azureApiKey, // Authorization header for Azure OpenAI API
+				},
+				body: JSON.stringify(requestBody)
+			});
+			if (response.ok) {
+				const data = await response.json();
+				setApiResponse(JSON.stringify(data.choices[0].message.content)); // Adjust based on response structure
+			} else {
+				console.error(`Error: ${response.status}`);
+			}
+		} catch (error) {
+			console.error('Error:', error);
+		}
+	};
+	  
+	   const generatePrompt = (text:string) => {
+		return `You are a helpful assistant and you work for a digital agency called punchcard systems. 
+		  On a scale of 1-10 (1 being low and 10 being high), please incorporate the following into the response: 
+		  Assertiveness: ${assertiveness}/10, Simplicity: ${simplicity}/10, Formality: ${formality}/10, Analytical: ${analytical}/10, Enthusiasm: ${enthusiasm}/10. 
+		  Text: "${text}".`;
+	   };
+
 	return (
 		<Page title="Punchy Portal">
 			<div className="container-fluid">
@@ -56,12 +157,6 @@ const PunchyPortal = () => {
 							<div className='mb-3'>
 								<PromptFilterList/>
 							</div>
-							{mockData.map((data) =>
-								<div key={`${data.id} - ${data.title}`} className="pb-4">
-									<PromptCard key={data.id} title={data.title} image={data.image} />
-
-								</div>
-							)}
 						</div>
 					</div>
 
@@ -69,6 +164,19 @@ const PunchyPortal = () => {
 					<div className={`bg-punchy-yellow col-6 d-flex align-items-end ${isRightColumnVisible ? '' : 'w-75'
 					}`} >
 						<div className="w-100 p-3">
+							<div className={`bg-punchy-yellow col-6 d-flex align-items-end ${isRightColumnVisible ? '' : 'w-75'}`}>
+            <div className="w-100 p-3">
+              <Input
+                placeholder="Type your message here..."
+                style={{ height: '55px'}}
+                className="bg-punchy-mustard"
+                value={inputText}
+                onChange={(e) => setInputText(e.target.value)}
+              />
+              <Button onClick={sendPromptToAPI}>Send</Button>
+              {apiResponse && <div>Response: {apiResponse}</div>}
+            </div>
+          </div>
 							<Input placeholder="Type your message here..." style={{ height: '55px' }} />
 						</div>
 					</div>
