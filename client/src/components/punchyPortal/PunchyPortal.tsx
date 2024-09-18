@@ -30,10 +30,10 @@ const PunchyPortal = () => {
 	];
 	return (
 		<Page title="Punchy Portal">
-			<div className="container-fluid vh-100">
-				<div className="row h-100">
+			<div className="container-fluid">
+				<div className="row">
 					{/* Left Column */}
-					<div className="col-3 d-flex flex-column  bg-punchy-gray">
+					<div className="col-3 d-flex flex-column overflow-auto  bg-punchy-gray" style={{height: '100vh'}}>
 						<h2 className="pt-4 ms-3">Prompts</h2>
 						<Controller
 							control={control}
@@ -62,7 +62,7 @@ const PunchyPortal = () => {
 					</div>
 
 					{/* Center Column */}
-					<div className="col-6 d-flex align-items-end pb-4">
+					<div className="col-6 d-flex align-items-end">
 						<div className="w-100 p-3">
 							<Input placeholder="Type question here..." style={{ height: '55px' }} />
 						</div>
