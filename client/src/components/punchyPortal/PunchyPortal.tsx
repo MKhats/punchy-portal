@@ -3,6 +3,7 @@ import { Button, Checkbox,  Input, Page, Select } from 'components/core';
 import { IconAdd, IconBrand, IconChevronLeft, IconChevronRight, IconEdit, IconView } from 'assets/icons';
 import PromptCard from './PromptCard';
 import { Controller, useForm } from 'react-hook-form';
+import PromptFilterList from './PromptFilterList';
 
 const PunchyPortal = () => {
 	const [isRightColumnVisible, setRightColumnVisible] =
@@ -51,7 +52,10 @@ const PunchyPortal = () => {
 								</div>
 							}
 						/>
-						<div className="w-100 p-3">
+						<div className="w-100 py-3 pb-3 pt-2">
+							<div className='mb-3'>
+								<PromptFilterList/>
+							</div>
 							{mockData.map((data) =>
 								<div key={`${data.id} - ${data.title}`} className="pb-4">
 									<PromptCard key={data.id} title={data.title} image={data.image} />
