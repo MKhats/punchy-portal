@@ -86,11 +86,14 @@ const PunchyPortal = () => {
 						>
 							<IconChevronRight />
 						</Button>
-						<div className="d-flex align-items-baseline ms-4" style={{whiteSpace:'nowrap'}}>
-							<h2> Prompt Personality</h2>
-						</div>
-						<div className="w-100 p-3 d-flex align-items-baseline" style={{position: 'relative', right: '110px'}} >
-							<Checkbox isSwitch={true} className="ms-auto" /> <span>Recommended values</span>
+						<div className="d-flex flex-column">
+							<div className="d-flex align-items-baseline ms-4" style={{whiteSpace:'nowrap'}}>
+								<h2> Prompt Personality</h2>
+							</div>
+							<div className="p-3 d-flex" >
+								<Checkbox isSwitch={true} className="ms-auto" /> <span>Recommended values</span>
+							</div>
+
 						</div>
 						<div className="d-flex flex-column p-4">
 							<input type="range" className="mb-2 w-100" id="voice-slider" defaultValue="0" />
