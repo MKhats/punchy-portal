@@ -1,0 +1,99 @@
+//////////////////////////////////////////////////
+// Page wrappers
+//////////////////////////////////////////////////
+
+#root, body, html {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	min-height: 100%;
+}
+.wrapper {
+	display: flex;
+    flex-direction: column;
+	flex: 1 1 auto;
+}
+
+.page-content-wrapper {
+	@include media-breakpoint-up(xl) {
+		@if $enable-navbar-fixed {
+			margin-top: $navbar-height !important;
+		}
+	}
+
+	@include media-breakpoint-down(xl) {
+		@if $enable-navbar-fixed {
+			padding-top: $navbar-height;
+		}
+	}
+}
+
+.page-content {
+	animation: onContentEnter $transition-duration-base $transition-bezier 1;
+
+	@keyframes onContentEnter {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}
+
+//////////////////////////////////////////////////
+// Spacing helpers
+//////////////////////////////////////////////////
+
+.content-set {
+	> * + * {
+		margin-top: $grid-gutter-width;
+	}
+
+	&-sm {
+		> * + * {
+			margin-top: $grid-gutter-width * 0.75;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		&-lg {
+			> * + * {
+				margin-top: map-get($spacers, 5);
+			}
+		}
+	}
+}
+
+//////////////////////////////////////////////////
+// Style helpers
+//////////////////////////////////////////////////
+
+.disabled {
+	opacity: $disabled-opacity;
+}
+
+.disable-pointer-events {
+	pointer-events: none;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+//////////////////////////////////////////////////
+// Animations
+//////////////////////////////////////////////////
+
+.content-fade-in {
+	animation: onContentFadeIn $transition-duration-base $transition-bezier 1;
+
+	@keyframes onContentFadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}

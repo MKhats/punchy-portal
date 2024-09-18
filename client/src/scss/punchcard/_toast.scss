@@ -1,0 +1,57 @@
+$rt-namespace: 'Toastify';
+$rt-mobile: 'only screen and (max-width : 480px)' !default;
+$light: #fff;
+:root {
+	--toastify-color-light: #{$light};
+	--toastify-color-dark: #{$dark};
+	--toastify-color-info: #{$info};
+	--toastify-color-success: #{$success};
+	--toastify-color-warning: #{$warning};
+	--toastify-color-error: #{$danger};
+	--toastify-color-transparent: rgba(255, 255, 255, 0.7);
+
+	--toastify-icon-color-info: var(--toastify-color-info);
+	--toastify-icon-color-success: var(--toastify-color-success);
+	--toastify-icon-color-warning: var(--toastify-color-warning);
+	--toastify-icon-color-error: var(--toastify-color-error);
+
+	--toastify-toast-width: #{$spacer * 21};
+	--toastify-toast-background: #{$body-bg};
+	--toastify-toast-min-height: #{$spacer * 4};
+	--toastify-toast-max-height: #{$spacer * 40};
+	--toastify-font-family: #{$font-family-base};
+	--toastify-z-index: 9999;
+
+	--toastify-text-color-light: #{$dark};
+	--toastify-text-color-dark: #{$light};
+
+	//Used only for colored theme
+	--toastify-text-color-info: #{$light};
+	--toastify-text-color-success: #{$light};
+	--toastify-text-color-warning: #{$light};
+	--toastify-text-color-error: #{$light};
+
+	--toastify-spinner-color: #{$dark};
+	--toastify-spinner-color-empty-area: #{$light};
+
+	// Used when no type is provided
+	--toastify-color-progress-light: linear-gradient(to right, #{$success}, #{$primary-300}, #{$primary-500}, #{$primary-400}, #{$primary-600}, #{$danger});
+	// Used when no type is provided
+	--toastify-color-progress-dark: #{$primary};
+	--toastify-color-progress-info: var(--toastify-color-info);
+	--toastify-color-progress-success: var(--toastify-color-success);
+	--toastify-color-progress-warning: var(--toastify-color-warning);
+	--toastify-color-progress-error: var(--toastify-color-error);
+}
+// import the toastify scss files
+@import 'node_modules/react-toastify/scss/toastContainer';
+@import 'node_modules/react-toastify/scss/toast';
+@import 'node_modules/react-toastify/scss/theme';
+@import 'node_modules/react-toastify/scss/closeButton';
+@import 'node_modules/react-toastify/scss/progressBar';
+@import 'node_modules/react-toastify/scss/icons';
+@import 'node_modules/react-toastify/scss/animations/bounce.scss';
+@import 'node_modules/react-toastify/scss/animations/zoom.scss';
+@import 'node_modules/react-toastify/scss/animations/flip.scss';
+@import 'node_modules/react-toastify/scss/animations/slide.scss';
+@import 'node_modules/react-toastify/scss/animations/spin.scss';

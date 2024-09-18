@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Punchcard.Core.Server.props" />
+</Project>

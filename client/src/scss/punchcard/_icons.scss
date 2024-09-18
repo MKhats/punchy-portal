@@ -1,0 +1,27 @@
+svg {
+  display: inline-block;
+  width: $icon-size;
+  height: $icon-size;
+  fill: currentColor;
+  vertical-align: middle;
+
+  // Prevent the SVG title from displaying on hover
+  &:not(.icon-has-title) * {
+    pointer-events: none;
+  }
+}
+.password-visibility-button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+.password-visibility-position {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  cursor: pointer;
+  color: $gray-600;
+}

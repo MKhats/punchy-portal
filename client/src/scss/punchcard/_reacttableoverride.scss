@@ -1,0 +1,61 @@
+.rt-td {
+	.btn {
+		padding: 0;
+		margin-left: auto;
+	}
+}
+
+.ReactTable .rt-thead .rt-th:not(:last-child),
+.ReactTable .rt-thead .rt-td:not(:last-child) {
+	div:first-child:after {
+		content: "";
+		background-image: url('src/assets/icons/icon-chevron-down.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		display: inline-block;
+		height: 30px;
+		width: 30px;
+		margin-left: auto;
+		vertical-align: middle;
+	}
+}
+
+.ReactTable .rt-thead .rt-th.-sort-asc:not(:last-child),
+.ReactTable .rt-thead .rt-td.-sort-asc:not(:last-child) {
+	div:first-child:after {
+		content: "";
+		background-image: url('src/assets/icons/icon-chevron-up.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		display: inline-block;
+		height: 30px;
+		width: 30px;
+		margin-left: auto;
+		vertical-align: middle;
+	}
+}
+
+.ReactTable .rt-thead .rt-th.-sort-desc:not(:last-child),
+.ReactTable .rt-thead .rt-td.-sort-desc:not(:last-child) {
+	div:first-child:after {
+		content: "";
+		background-image: url('src/assets/icons/icon-chevron-down.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		display: inline-block;
+		height: 30px;
+		width: 30px;
+		margin-left: auto;
+		vertical-align: middle;
+	}
+}
+
+.ReactTable .rt-thead .rt-th.-sort-asc,
+.ReactTable .rt-thead .rt-td.-sort-asc {
+	box-shadow: none;
+}
+
+.ReactTable .rt-thead .rt-th.-sort-desc,
+.ReactTable .rt-thead .rt-td.-sort-desc {
+	box-shadow: none;
+}

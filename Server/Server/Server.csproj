@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Company>Punchcard</Company>
+    <Product>Core Framework</Product>
+    <Authors />
+    <PackageId>Punchcard.Core.Server</PackageId>
+    <AssemblyName>Punchcard.Core.Server</AssemblyName>
+    <RootNamespace>Punchcard.Core.Server</RootNamespace>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <UserSecretsId>d549cd1e-c16e-4adf-97de-c71e11135a6a</UserSecretsId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Server' " />
+  <ItemGroup>
+    <Compile Remove="SeedData\**" />
+    <Content Remove="SeedData\**" />
+    <EmbeddedResource Remove="SeedData\**" />
+    <None Remove="SeedData\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.20.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="6.0.19" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="2.12.4" />
+    <PackageReference Include="ServiceStack.Api.Swagger" Version="5.14.0" />
+    <PackageReference Include="ServiceStack.Core" Version="6.10.0" />
+    <PackageReference Include="ServiceStack.Server.Core" Version="6.10.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Punchcard.Core.Auth\Punchcard.Core.Auth.csproj" />
+    <ProjectReference Include="..\Punchcard.Core.Notification\Punchcard.Core.Notification.csproj" />
+    <ProjectReference Include="..\Server.DataModel\Server.DataModel.csproj" />
+    <ProjectReference Include="..\Server.ServiceInterface\Server.ServiceInterface.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="Connected Services\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+</Project>

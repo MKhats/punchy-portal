@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>Punchcard.Core.Server.ServiceInterface</AssemblyName>
+    <RootNamespace>Punchcard.Core.Server.ServiceInterface</RootNamespace>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.13.0" />
+    <PackageReference Include="HiQPdf_NetCore" Version="14.0.0" />
+    <PackageReference Include="LazyCache.AspNetCore" Version="2.4.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.2.9" />
+    <PackageReference Include="Sendgrid" Version="9.28.0" />
+    <PackageReference Include="ServiceStack.Core" Version="6.1.0" />
+    <PackageReference Include="ServiceStack.Server.Core" Version="6.1.0" />
+    <PackageReference Include="Stripe.net" Version="39.123.0" />
+    <PackageReference Include="Microsoft.Azure.NotificationHubs" Version="4.1.0" />
+    <PackageReference Include="Microsoft.TeamFoundationServer.Client" Version="16.170.0" />
+    <PackageReference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts" Version="16.170.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Punchcard.Core.Auth\Punchcard.Core.Auth.csproj" />
+    <ProjectReference Include="..\Punchcard.Core.Notification\Punchcard.Core.Notification.csproj" />
+    <ProjectReference Include="..\Server.DataModel\Server.DataModel.csproj" />
+    <ProjectReference Include="..\Server.ServiceModel\Server.ServiceModel.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory">
+      <HintPath>..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.identitymodel.clients.activedirectory\3.14.1\lib\netstandard1.3\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Microsoft.Azure.NotificationHubs" />
+    <None Remove="Microsoft.TeamFoundationServer.Client" />
+    <None Remove="Microsoft.TeamFoundation.DistributedTask.Common.Contracts" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ServiceStack.Interfaces.Core" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Server.DataModel\Server.DataModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Requests\MobileNotifications\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Requests\MobileNotifications\" />
+  </ItemGroup>
+</Project>

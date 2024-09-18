@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "EL1BetJZkC1W322ul5a8e/YK8WKzXzmf1GO8Ur37kmQ=",
+  "Source": "Punchcard.Core.Server",
+  "BasePath": "_content/Punchcard.Core.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

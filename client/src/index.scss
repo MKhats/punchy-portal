@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@use 'sass:math';
+// Bootstrap helpers — now imported from node_modules
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/mixins';
+
+// Punchcard helpers
+@import 'scss/punchcard/helpers';
+
+// Site variables
+@import 'scss/variables';
+
+// Bootstrap styles
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Punchcard styles
+@import 'scss/punchcard/Punchcard';
+
+// Custom Project styles
+// Place project-specific CSS in the scss/custom folder.
+// Rename custom with the project name for more clarity.
+@import 'scss/custom/Custom';
+
+// DO NOT ADD CSS HERE, ADD CUSTOM CSS IN THE CUSTOM FOLDER

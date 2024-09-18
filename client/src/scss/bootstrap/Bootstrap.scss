@@ -1,0 +1,15 @@
+//================================================
+//
+// Bootstrap source files are in node_modules.
+//
+//================================================
+//
+// All bootstrap files have been removed from core.
+// They are now imported from the bootstrap package
+// in the node_modules. This is to allow for easier
+// updating of bootstrap. Bootstrap files are never
+// to be edited directly. Instead, you can override
+// bootstrap variables in src/scss/_variables.scss.
+// —— Robin, September 14, 2023.
+// 
+//================================================

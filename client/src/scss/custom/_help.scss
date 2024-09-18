@@ -1,0 +1,46 @@
+.codeExample {
+	color: orange;
+}
+
+.elementExample {
+	color: blue
+}
+
+.helpBox {
+	border: 1px dashed black;
+	position: relative;
+	padding: 20px;
+	margin: 20px;
+}
+
+.helpMessage {
+	color: black;
+}
+
+.helpMessage code {
+	color: rgb(126, 126, 126);
+}
+
+.helpComment {
+	color: green;
+}
+
+.helpBoxCaption {
+	font-size: small;
+	font: italic;
+	top: 0px;
+	left: 10px;
+	position: absolute;
+}
+
+.helpHeaderButton {
+	align-self: flex-end;
+	display: inline-block;
+	margin-left: 50px;
+}
+
+.btn-sourceCode {
+	background-color: blueviolet !important;
+	color: white !important;
+
+}

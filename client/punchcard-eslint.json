@@ -1,0 +1,39 @@
+{
+	"rules": {
+		"indent": [
+			"warn",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"curly": [
+			"warn",
+			"all"
+		],
+		"max-len": [
+			"warn",
+			{
+				"code": 200,
+				"ignoreUrls": true
+			}
+		],
+		"no-trailing-spaces": "warn",
+		"jsx-quotes": [
+			"warn",
+			"prefer-double"
+		],
+		"quotes": [
+			"warn",
+			"single",
+			{
+				"avoidEscape": true
+			}
+		],
+		"react/display-name": 0,
+		"react/no-unescaped-entities": 0,
+		"react/no-deprecated": [
+			"warn"
+		]
+	}
+}

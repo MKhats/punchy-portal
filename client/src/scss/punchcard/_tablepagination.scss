@@ -1,0 +1,18 @@
+.page-number.active {
+	background-color: $primary;
+	color: $white;
+}
+
+.page-number {
+	@extend .btn;
+	border-radius: 0;
+	border-top: 0 !important;
+	border-bottom: 0 !important;
+	border-right: 0 !important;
+	border-left: 1px solid $border-color !important;
+}
+
+.page-number.active {
+	background-color: $primary;
+	color: $white;
+}
