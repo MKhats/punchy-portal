@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ActionIcon, Button, Page } from 'components/core';
+import { ActionIcon, Button, Checkbox, Page } from 'components/core';
 import { useForm } from 'react-hook-form';
 import tannerOnboardingAPI from 'APICalls/tannerOnboardingAPI';
 import { toast } from 'react-toastify';
@@ -54,22 +54,26 @@ const PunchyPortal = () => {
 					{/* Right Column */}
 					<div
 						className={`col-3 bg-punchy-gray ${isRightColumnVisible ? '' : 'd-none'
-						}`}
+							}`}
 					>
-						<div className="w-100 p-3 d-flex align-items-baseline">
-							<Button
-								onClick={toggleRightColumn}
-							>
-								<IconChevronRight />
-							</Button>
-							<h5>Personality</h5>
+						<div className="w-100 p-3 d-flex align-items-baseline" style={{ position: 'relative', right: '32px', top: '15px' }}>
+							<div className="d-flex align-items-baseline">
+								<Button
+									onClick={toggleRightColumn}
+								>
+									<IconChevronRight />
+								</Button>
+								<h5>Personality</h5>
+
+							</div>
+							<Checkbox isSwitch={true} className="ms-auto" style={{ position: 'relative', left: '21px' }} />
 						</div>
 					</div>
 				</div>
 				{/** Toggle Open */}
 				<div
 					className={`position-fixed ${isRightColumnVisible ? 'd-none' : ''}`}
-					style={{ right: '10px', top: '16.5px' }}
+					style={{ right: '10px', top: '31.5px' }}
 				>
 					<Button onClick={toggleRightColumn}>
 						<IconChevronLeft />
