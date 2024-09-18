@@ -16,7 +16,7 @@ const PromptCard = ({ title, image, className, style }: IProps) => {
 				height: '169px',
 				padding: '15px 177px 106px 22px',
 				borderRadius: '8px',
-				backgroundColor: '#F9DAAD',
+				backgroundColor: '#FEFEF6',
 				border: '1px solid black',
 				...style,
 			}}

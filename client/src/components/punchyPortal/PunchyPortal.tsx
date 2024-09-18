@@ -70,13 +70,13 @@ const PunchyPortal = () => {
 					<div className={`bg-punchy-yellow col-6 d-flex align-items-end ${isRightColumnVisible ? '' : 'w-75'
 					}`} >
 						<div className="w-100 p-3">
-							<Input placeholder="Type your message here..." style={{ height: '55px'}} className="bg-punchy-mustard" />
+							<Input placeholder="Type your message here..." style={{ height: '55px'}} />
 						</div>
 					</div>
 
 					{/* Right Column */}
 					<div
-						className={`col-3 bg-punchy-tan overflow-auto ${isRightColumnVisible ? '' : 'd-none'
+						className={`col-3 bg-punchy-tan overflow-auto p-2 ${isRightColumnVisible ? '' : 'd-none'
 						}`}
 						style={{height: '100vh'}}
 					>
@@ -86,10 +86,10 @@ const PunchyPortal = () => {
 						>
 							<IconChevronRight />
 						</Button>
-						<div className="d-flex align-items-baseline ms-4">
+						<div className="d-flex align-items-baseline ms-4" style={{whiteSpace:'nowrap'}}>
 							<h2> Prompt Personality</h2>
 						</div>
-						<div className="w-100 p-3 d-flex align-items-baseline" style={{position: 'relative', right: '95px'}} >
+						<div className="w-100 p-3 d-flex align-items-baseline" style={{position: 'relative', right: '110px'}} >
 							<Checkbox isSwitch={true} className="ms-auto" /> <span>Recommended values</span>
 						</div>
 						<div className="d-flex flex-column p-4">
