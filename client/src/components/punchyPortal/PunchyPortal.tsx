@@ -66,7 +66,8 @@ const PunchyPortal = () => {
 					</div>
 
 					{/* Center Column */}
-					<div className="col-6 d-flex align-items-end">
+					<div className={`col-6 d-flex align-items-end ${isRightColumnVisible ? '' : 'w-75'
+					}`} >
 						<div className="w-100 p-3">
 							<Input placeholder="Type question here..." style={{ height: '55px' }} />
 						</div>
