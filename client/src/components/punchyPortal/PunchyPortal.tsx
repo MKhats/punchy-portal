@@ -24,7 +24,7 @@ const PunchyPortal = () => {
 					{/* Center Column */}
 					<div className="col-6 d-flex align-items-end pb-4">
 						<div className="w-100 p-3">
-							<Input placeholder="Type question here..." />
+							<Input placeholder="Type question here..." style={{ height: '55px' }} />
 						</div>
 					</div>
 
