@@ -171,7 +171,8 @@ useState
 					<div className={`bg-punchy-yellow col-6 d-flex align-items-end ${isRightColumnVisible ? '' : 'w-75'
 					}`} >
 						<div className="w-100 p-3">
-							<div className={`bg-punchy-yellow col-6 d-flex align-items-end ${isRightColumnVisible ? '' : 'w-75'}`}>
+							{apiResponse && <div className="bg-punchy-tan p-2">Response: {apiResponse}</div>}
+							<div className={`bg-punchy-yellow col-6 d-flex mt-2 align-items-end ${isRightColumnVisible ? 'w-100' : 'w-75'}`}>
 								<div className="w-100 p-3 d-flex">
 									<Input
 										placeholder="Type your message here..."
@@ -181,7 +182,6 @@ useState
 										onChange={(e) => setInputText(e.target.value)}
 									/>
 									<Button onClick={sendPromptToAPI}>Send</Button>
-									{apiResponse && <div>Response: {apiResponse}</div>}
 								</div>
 							</div>
 						</div>
@@ -203,7 +203,7 @@ useState
 							<div className="d-flex align-items-baseline ms-4" style={{whiteSpace:'nowrap'}}>
 								<h2> Prompt Personality</h2>
 							</div>
-							<div className="p-3 d-flex" >
+							<div className="p-3 d-flex align-self-baseline ms-3" >
 								<Checkbox isSwitch={true} className="ms-auto" /> <span>Recommended values</span>
 							</div>
 
