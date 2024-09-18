@@ -15,55 +15,55 @@ interface DataItem {
 const PunchyPortal = () => {
 	const [isRightColumnVisible, setRightColumnVisible] =
 		useState<boolean>(false);
-		const [data, setData] = useState<DataItem[]>([]);
+	const [data, setData] = useState<DataItem[]>([]);
 
-		const
-[inputText, setInputText] =
+	const
+		[inputText, setInputText] =
 useState
 (
-''
+	''
 );
-const
-[assertiveness, setAssertiveness] =
+	const
+		[assertiveness, setAssertiveness] =
 useState
 (5);
-const
-[simplicity, setSimplicity] =
+	const
+		[simplicity, setSimplicity] =
 useState
 (5);
-const
-[formality, setFormality] =
+	const
+		[formality, setFormality] =
 useState
 (5);
-const
-[analytical, setAnalytical] =
+	const
+		[analytical, setAnalytical] =
 useState
 (5);
-const
-[enthusiasm, setEnthusiasm] =
+	const
+		[enthusiasm, setEnthusiasm] =
 useState
 (5);
-const
-[apiResponse, setApiResponse] =
+	const
+		[apiResponse, setApiResponse] =
 useState
 (
-''
+	''
 );
-	
-		// Fetch the JSON data
-		useEffect(() => {
-			const fetchData = async () => {
-				try {
-					const response = await fetch('promptLibrary.json');
-					const json = await response.json();
-					setData(json);
-				} catch (error) {
-					console.error('Error fetching the JSON:', error);
-				}
-			};
-	
-			fetchData();
-		}, []);
+
+	// Fetch the JSON data
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const response = await fetch('promptLibrary.json');
+				const json = await response.json();
+				setData(json);
+			} catch (error) {
+				console.error('Error fetching the JSON:', error);
+			}
+		};
+
+		fetchData();
+	}, []);
 
 	const toggleRightColumn = () => {
 		setRightColumnVisible((prev) => !prev);
@@ -86,18 +86,18 @@ useState
 		{ value: 'Design Language', label: 'Design Language' },
 	];
 
-	const azureOpenAiUrl = "https://punchcard-ai.openai.azure.com/openai/deployments/punchcard-chat-gpt-4o/chat/completions?api-version=2023-03-15-preview";
-	const azureApiKey = "d89c47dba94d436cb7aa2a1cbb3f54e5"; // Replace with your actual API key
+	const azureOpenAiUrl = 'https://punchcard-ai.openai.azure.com/openai/deployments/punchcard-chat-gpt-4o/chat/completions?api-version=2023-03-15-preview';
+	const azureApiKey = 'd89c47dba94d436cb7aa2a1cbb3f54e5'; // Replace with your actual API key
 	// Function to send prompt to the Azure OpenAI API
 	const sendPromptToAPI = async () => {
 		const requestBody = {
 			messages: [
 				{
-					role: "system",
-					content: "You are a helpful assistant for Punchcard Systems."
+					role: 'system',
+					content: 'You are a helpful assistant for Punchcard Systems.'
 				},
 				{
-					role: "user",
+					role: 'user',
 					content: generatePrompt(inputText)
 				}
 			],
@@ -123,7 +123,7 @@ useState
 			console.error('Error:', error);
 		}
 	};
-	  
+
 	   const generatePrompt = (text:string) => {
 		return `You are a helpful assistant and you work for a digital agency called punchcard systems. 
 		  On a scale of 1-10 (1 being low and 10 being high), please incorporate the following into the response: 
@@ -160,9 +160,9 @@ useState
 							</div>
 							{data.map((data) =>
 
-							<div key={`${data.promptTitle} - ${data.promptTitle}`} className="pb-4">
-								<PromptCard key={data.promptTitle} title={data.promptTitle} />
-							</div>
+								<div key={`${data.promptTitle} - ${data.promptTitle}`} className="pb-4">
+									<PromptCard key={data.promptTitle} title={data.promptTitle} />
+								</div>
 							)}
 						</div>
 					</div>
@@ -172,19 +172,18 @@ useState
 					}`} >
 						<div className="w-100 p-3">
 							<div className={`bg-punchy-yellow col-6 d-flex align-items-end ${isRightColumnVisible ? '' : 'w-75'}`}>
-            <div className="w-100 p-3">
-              <Input
-                placeholder="Type your message here..."
-                style={{ height: '55px'}}
-                className="bg-punchy-mustard"
-                value={inputText}
-                onChange={(e) => setInputText(e.target.value)}
-              />
-              <Button onClick={sendPromptToAPI}>Send</Button>
-              {apiResponse && <div>Response: {apiResponse}</div>}
-            </div>
-          </div>
-							<Input placeholder="Type your message here..." style={{ height: '55px' }} />
+								<div className="w-100 p-3 d-flex">
+									<Input
+										placeholder="Type your message here..."
+										style={{ height: '55px'}}
+										className="bg-punchy-mustard"
+										value={inputText}
+										onChange={(e) => setInputText(e.target.value)}
+									/>
+									<Button onClick={sendPromptToAPI}>Send</Button>
+									{apiResponse && <div>Response: {apiResponse}</div>}
+								</div>
+							</div>
 						</div>
 					</div>
 
