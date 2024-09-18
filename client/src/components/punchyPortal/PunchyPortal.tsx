@@ -33,7 +33,7 @@ const PunchyPortal = () => {
 			<div className="container-fluid">
 				<div className="row">
 					{/* Left Column */}
-					<div className="col-3 d-flex flex-column overflow-auto  bg-punchy-gray" style={{height: '100vh'}}>
+					<div className="col-3 d-flex flex-column overflow-auto bg-punchy-tan" style={{height: '100vh'}}>
 						<h2 className="pt-4 ms-3">Prompts</h2>
 						<Controller
 							control={control}
@@ -62,7 +62,7 @@ const PunchyPortal = () => {
 					</div>
 
 					{/* Center Column */}
-					<div className={`col-6 d-flex align-items-end ${isRightColumnVisible ? '' : 'w-75'
+					<div className={`bg-punchy-yellow col-6 d-flex align-items-end ${isRightColumnVisible ? '' : 'w-75'
 					}`} >
 						<div className="w-100 p-3">
 							<Input placeholder="Type question here..." style={{ height: '55px' }} />
@@ -71,7 +71,7 @@ const PunchyPortal = () => {
 
 					{/* Right Column */}
 					<div
-						className={`col-3 bg-punchy-gray ${isRightColumnVisible ? '' : 'd-none'
+						className={`col-3 bg-punchy-tan ${isRightColumnVisible ? '' : 'd-none'
 						}`}
 					>
 						<div className="w-100 p-3 d-flex align-items-baseline" style={{ position: 'relative', right: '32px', top: '15px' }}>
