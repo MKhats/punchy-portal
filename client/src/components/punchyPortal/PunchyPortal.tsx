@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Checkbox, DropdownInput, Input, Page, Select } from 'components/core';
+import { Button, Checkbox,  Input, Page, Select } from 'components/core';
 import { IconAdd, IconBrand, IconChevronLeft, IconChevronRight, IconEdit, IconView } from 'assets/icons';
 import PromptCard from './PromptCard';
 import { Controller, useForm } from 'react-hook-form';
@@ -13,7 +13,6 @@ const PunchyPortal = () => {
 
 	const { control } = useForm();
 
-	const [selectedValue, setSelectedValue] = useState<string>('Prompt Category');
 
 	const mockData = [
 		{ id: 1, title: 'Testing One', image: <IconAdd /> },
@@ -72,7 +71,7 @@ const PunchyPortal = () => {
 					{/* Right Column */}
 					<div
 						className={`col-3 bg-punchy-gray ${isRightColumnVisible ? '' : 'd-none'
-							}`}
+						}`}
 					>
 						<div className="w-100 p-3 d-flex align-items-baseline" style={{ position: 'relative', right: '32px', top: '15px' }}>
 							<div className="d-flex align-items-baseline">
