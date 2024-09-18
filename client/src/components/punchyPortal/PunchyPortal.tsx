@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Checkbox, Input, Page } from 'components/core';
-import { IconChevronLeft, IconChevronRight } from 'assets/icons';
+import { Button, Checkbox, DropdownInput, Input, Page, Select } from 'components/core';
+import { IconAdd, IconBrand, IconChevronLeft, IconChevronRight, IconEdit, IconView } from 'assets/icons';
+import PromptCard from './PromptCard';
+import { Controller, useForm } from 'react-hook-form';
 
 const PunchyPortal = () => {
 	const [isRightColumnVisible, setRightColumnVisible] =
@@ -9,15 +11,54 @@ const PunchyPortal = () => {
 		setRightColumnVisible((prev) => !prev);
 	};
 
+	const { control } = useForm();
+
+	const [selectedValue, setSelectedValue] = useState<string>('Prompt Category');
+
+	const mockData = [
+		{ id: 1, title: 'Testing One', image: <IconAdd /> },
+		{ id: 2, title: 'Testing Two', image: <IconBrand /> },
+		{ id: 3, title: 'Testing Three', image: <IconView /> },
+		{ id: 4, title: 'Testing Four', image: <IconEdit /> },
+	];
+
+	const tempCategories = [
+		{ value: 'Onboarding', label: 'Onboarding' },
+		{ value: 'Style Guide', label: 'Style Guide' },
+		{ value: 'Best Practices', label: 'Best Practices' },
+		{ value: 'Design Language', label: 'Design Language' },
+
+	];
 	return (
 		<Page title="Punchy Portal">
 			<div className="container-fluid vh-100">
 				<div className="row h-100">
 					{/* Left Column */}
-					<div className="col-3 d-flex align-items-center bg-punchy-gray">
+					<div className="col-3 d-flex flex-column  bg-punchy-gray">
+						<h2 className="pt-4 ms-3">Prompts</h2>
+						<Controller
+							control={control}
+							name="promptCategories"
+							aria-labelledby="promptCategories"
+							render={({ field }) =>
+								<div className="mb-3">
+									<Select
+										value={field.value}
+										onChange={field.onChange}
+										options={tempCategories}
+										className="ms-3"
+										placeholder="Prompt category"
+									/>
+								</div>
+							}
+						/>
 						<div className="w-100 p-3">
-							<h5>Left Column</h5>
-							<p>Content for the left column.</p>
+							{mockData.map((data) =>
+								<div key={`${data.id} - ${data.title}`} className="pb-4">
+									<PromptCard key={data.id} title={data.title} image={data.image} />
+
+								</div>
+							)}
 						</div>
 					</div>
 
@@ -31,7 +72,7 @@ const PunchyPortal = () => {
 					{/* Right Column */}
 					<div
 						className={`col-3 bg-punchy-gray ${isRightColumnVisible ? '' : 'd-none'
-						}`}
+							}`}
 					>
 						<div className="w-100 p-3 d-flex align-items-baseline" style={{ position: 'relative', right: '32px', top: '15px' }}>
 							<div className="d-flex align-items-baseline">
