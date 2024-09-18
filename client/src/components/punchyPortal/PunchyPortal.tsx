@@ -172,7 +172,7 @@ useState
 					}`} >
 						<div className="w-100 p-3">
 							{apiResponse && <div className="bg-punchy-tan p-2">Response: {apiResponse}</div>}
-							<div className={`bg-punchy-yellow col-6 d-flex mt-2 align-items-end ${isRightColumnVisible ? 'w-100' : 'w-75'}`}>
+							<div className={'bg-punchy-yellow col-6 d-flex mt-2 align-items-end  w-100'}>
 								<div className="w-100 p-3 d-flex">
 									<Input
 										placeholder="Type your message here..."
