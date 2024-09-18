@@ -1,0 +1,192 @@
+[
+    {
+        "promptTitle": "SharePoint Site Provisioning Automation",
+        "category": "Task Automation",
+        "promptText": "Create a PowerShell script that automates the provisioning of new SharePoint sites based on a template."
+    },
+    {
+        "promptTitle": "Power Automate Approval Workflow",
+        "category": "Code Generation & Optimization",
+        "promptText": "Generate a Power Automate flow that sends an approval request when a new item is added to a SharePoint list."
+    },
+    {
+        "promptTitle": "Power BI Sales Dashboard Creation",
+        "category": "UI/UX Design",
+        "promptText": "Design a Power BI dashboard that visualizes monthly sales data with interactive filters for regions and products."
+    },
+    {
+        "promptTitle": "SharePoint Metadata Management Script",
+        "category": "Task Automation",
+        "promptText": "Develop a PowerShell script to bulk update metadata for documents in a SharePoint library."
+    },
+    {
+        "promptTitle": "Power Automate Notification Flow",
+        "category": "Testing & Quality Assurance",
+        "promptText": "Create a test plan for a Power Automate flow that sends notifications when a SharePoint file is modified."
+    },
+    {
+        "promptTitle": "Power BI Data Refresh Scheduling",
+        "category": "Deployment & CI/CD",
+        "promptText": "Set up an automated schedule for data refresh in a Power BI report connected to SQL Server."
+    },
+    {
+        "promptTitle": "SharePoint Permissions Audit",
+        "category": "Security Auditing",
+        "promptText": "Generate a PowerShell script to audit user permissions across all SharePoint sites."
+    },
+    {
+        "promptTitle": "PowerShell Script for OneDrive Cleanup",
+        "category": "Task Automation",
+        "promptText": "Write a PowerShell script to identify and remove unused files in users' OneDrive accounts older than one year."
+    },
+    {
+        "promptTitle": "Power Automate Invoice Processing",
+        "category": "Code Generation & Optimization",
+        "promptText": "Generate a Power Automate flow that extracts data from incoming invoices and updates a SharePoint list."
+    },
+    {
+        "promptTitle": "Power BI Report Sharing Best Practices",
+        "category": "Documentation & Communication",
+        "promptText": "Create documentation outlining best practices for sharing Power BI reports within the organization."
+    },
+    {
+        "promptTitle": "SharePoint Migration Plan",
+        "category": "Project Management & Collaboration",
+        "promptText": "Develop a project plan for migrating on-premises SharePoint sites to SharePoint Online."
+    },
+    {
+        "promptTitle": "PowerShell Script for User Account Creation",
+        "category": "Task Automation",
+        "promptText": "Create a PowerShell script that automates the creation of new user accounts in Active Directory and assigns them to groups."
+    },
+    {
+        "promptTitle": "Power BI Performance Optimization",
+        "category": "Code Generation & Optimization",
+        "promptText": "Optimize this Power BI report for faster loading times and better performance."
+    },
+    {
+        "promptTitle": "SharePoint Site Branding Guidelines",
+        "category": "UI/UX Design",
+        "promptText": "Design a set of branding guidelines for SharePoint sites to ensure a consistent look and feel across the organization."
+    },
+    {
+        "promptTitle": "Power Automate Error Handling Implementation",
+        "category": "Testing & Quality Assurance",
+        "promptText": "Implement error handling in a Power Automate flow to retry failed actions and notify administrators."
+    },
+    {
+        "promptTitle": "PowerShell Script for SharePoint Backup",
+        "category": "Security Auditing",
+        "promptText": "Develop a PowerShell script to back up SharePoint site collections on a scheduled basis."
+    },
+    {
+        "promptTitle": "Power BI Training Material Creation",
+        "category": "Documentation & Communication",
+        "promptText": "Generate training materials for new users to learn how to create basic reports in Power BI."
+    },
+    {
+        "promptTitle": "SharePoint Online Governance Policy",
+        "category": "Security Auditing",
+        "promptText": "Draft a governance policy for SharePoint Online usage, including site creation, content management, and user permissions."
+    },
+    {
+        "promptTitle": "Power Automate Integration with Teams",
+        "category": "API Design & Integration",
+        "promptText": "Create a Power Automate flow that posts a message in Microsoft Teams when a new item is added to a SharePoint list."
+    },
+    {
+        "promptTitle": "PowerShell Script for License Reporting",
+        "category": "Database Management",
+        "promptText": "Write a PowerShell script to generate a report on Office 365 license usage across the organization."
+    },
+    {
+        "promptTitle": "Sprint Task List Generation",
+        "category": "Project Management & Collaboration",
+        "promptText": "Generate a sprint task list for the next two weeks of development on a React project."
+    },
+    {
+        "promptTitle": "Project Roadmap Creation",
+        "category": "Project Management & Collaboration",
+        "promptText": "Create a project roadmap for the next 3 months, outlining key milestones for a web application launch."
+    },
+    {
+        "promptTitle": "Daily Stand-up Report Generation",
+        "category": "Project Management & Collaboration",
+        "promptText": "Generate a daily stand-up report based on yesterday’s progress, today’s tasks, and blockers."
+    },
+    {
+        "promptTitle": "GitHub Actions Workflow for AWS Deployment",
+        "category": "Deployment & CI/CD",
+        "promptText": "Generate a GitHub Actions workflow file to automate deployment of this Node.js application to AWS."
+    },
+    {
+        "promptTitle": "Dockerfile Creation for MERN Application",
+        "category": "Deployment & CI/CD",
+        "promptText": "Create a Dockerfile for a full-stack MERN (MongoDB, Express, React, Node) application."
+    },
+    {
+        "promptTitle": "CI/CD Pipeline Optimization Suggestions",
+        "category": "Deployment & CI/CD",
+        "promptText": "Suggest steps to optimize the CI/CD pipeline for faster deployment and error catching."
+    },
+    {
+        "promptTitle": "OAuth2 Security Best Practices",
+        "category": "Security Auditing",
+        "promptText": "Generate a list of security best practices for developing a web application with OAuth2 for authentication."
+    },
+    {
+        "promptTitle": "CSRF Protection Implementation Suggestions",
+        "category": "Security Auditing",
+        "promptText": "Suggest code changes to implement CSRF (Cross-Site Request Forgery) protection in this web app."
+    },
+    {
+        "promptTitle": "SQL Injection Vulnerability Analysis",
+        "category": "Security Auditing",
+        "promptText": "Analyze this codebase for potential SQL injection vulnerabilities."
+    },
+    {
+        "promptTitle": "Development Environment Setup Documentation",
+        "category": "Documentation & Communication",
+        "promptText": "Generate documentation for setting up a development environment for this React project."
+    },
+    {
+        "promptTitle": "Admin Dashboard User Guide",
+        "category": "Documentation & Communication",
+        "promptText": "Create a user guide for the admin dashboard of a web app, covering account creation, data import, and reporting."
+    },
+    {
+        "promptTitle": "Code Review Discussion Summary",
+        "category": "Documentation & Communication",
+        "promptText": "Summarize the key points from this code review discussion."
+    },
+    {
+        "promptTitle": "MongoDB Schema for Blog Management",
+        "category": "Database Management",
+        "promptText": "Generate a MongoDB schema for managing a blog with users, posts, and comments."
+    },
+    {
+        "promptTitle": "SQL Query for Inactive Users",
+        "category": "Database Management",
+        "promptText": "Write a SQL query to fetch users who haven't logged in within the last 30 days."
+    },
+    {
+        "promptTitle": "Database Migration Scripts Generation",
+        "category": "Database Management",
+        "promptText": "Generate database migration scripts to update the schema from version 1.0 to 1.1."
+    },
+    {
+        "promptTitle": "Static Assets Deployment Script",
+        "category": "Task Automation",
+        "promptText": "Generate a script that automates the deployment of static assets to a CDN."
+    },
+    {
+        "promptTitle": "Database Backup Cron Job Script",
+        "category": "Task Automation",
+        "promptText": "Create a cron job script to automatically back up the database every 24 hours."
+    },
+    {
+        "promptTitle": "Repository Update and Server Restart Script",
+        "category": "Task Automation",
+        "promptText": "Generate a script that pulls the latest changes from the repository and restarts the web server."
+    }
+]
