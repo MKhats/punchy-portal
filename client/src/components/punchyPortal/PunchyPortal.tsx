@@ -236,7 +236,7 @@ const PunchyPortal = () => {
 					</div>
 
 					{/* Center Column */}
-					<div className="col-6 d-flex align-items-center bg-light">
+					<div className="col-6 d-flex align-items-center bg-punchy-gray">
 						<div className="w-100 p-3">
 							<h5>Center Column</h5>
 							<p>Content for the center column.</p>
@@ -244,7 +244,7 @@ const PunchyPortal = () => {
 					</div>
 
 					{/* Right Column */}
-					<div className="col-3 d-flex align-items-center bg-light">
+					<div className="col-3 d-flex align-items-center bg-punchy-gray">
 						<div className="w-100 p-3">
 							<h5>Right Column</h5>
 							<p>Content for the right column.</p>
