@@ -22,7 +22,7 @@ const PromptFilterList: React.FC = () => {
 
                 // Extract unique categories
                 const categories = Array.from(new Set(json.map((item: DataItem) => item.category)));
-                setUniqueCategories(categories);
+                setUniqueCategories(["Show all", ...categories]);
             } catch (error) {
                 console.error('Error fetching the JSON:', error);
             }
@@ -36,7 +36,7 @@ const PromptFilterList: React.FC = () => {
             <h6>Filters</h6>
             <div style={{flexWrap:'wrap'}}>
                 {uniqueCategories.map((category, index) => (
-                    <button key={index} className="m-1" style={{fontSize:'10px', padding:'5px', border:'1px solid #F1A331', borderRadius:'10px'}}>
+                    <button key={index} className="m-1 bg-punchy-tan" style={{fontSize:'10px', padding:'5px', border:'1px solid #F1A331', borderRadius:'10px'}}>
                         {category}
                     </button>
                 ))}
