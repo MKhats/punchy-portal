@@ -23,7 +23,7 @@ const PromptCard = ({ title, image, className, style }: IProps) => {
 		>
 			<div style={{ display: 'flex', alignItems: 'center' }}>
 				{image && <div style={{ marginRight: '8px', paddingRight: '26px' }}>{image}</div>}
-				{title && <h4 style={{ margin: 0, whiteSpace: 'nowrap' }}>{title}</h4>}
+				{title && <h4>{title}</h4>}
 			</div>
 		</div>
 	);

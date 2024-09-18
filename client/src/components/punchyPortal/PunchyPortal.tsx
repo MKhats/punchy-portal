@@ -158,6 +158,12 @@ useState
 							<div className="mb-3 ps-3">
 								<PromptFilterList/>
 							</div>
+							{data.map((data) =>
+
+							<div key={`${data.promptTitle} - ${data.promptTitle}`} className="pb-4">
+								<PromptCard key={data.promptTitle} title={data.promptTitle} />
+							</div>
+							)}
 						</div>
 					</div>
 
