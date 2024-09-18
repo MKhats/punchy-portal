@@ -69,14 +69,15 @@ const PunchyPortal = () => {
 					<div className={`bg-punchy-yellow col-6 d-flex align-items-end ${isRightColumnVisible ? '' : 'w-75'
 					}`} >
 						<div className="w-100 p-3">
-							<Input placeholder="Type question here..." style={{ height: '55px' }} />
+							<Input placeholder="Type your message here..." style={{ height: '55px' }} />
 						</div>
 					</div>
 
 					{/* Right Column */}
 					<div
-						className={`col-3 bg-punchy-tan ${isRightColumnVisible ? '' : 'd-none'
+						className={`col-3 bg-punchy-tan overflow-auto ${isRightColumnVisible ? '' : 'd-none'
 						}`}
+						style={{height: '100vh'}}
 					>
 						<div className="w-100 p-3 d-flex align-items-baseline" style={{ position: 'relative', right: '32px', top: '15px' }}>
 							<div className="d-flex align-items-baseline">
@@ -89,6 +90,46 @@ const PunchyPortal = () => {
 
 							</div>
 							<Checkbox isSwitch={true} className="ms-auto" style={{ position: 'relative', left: '21px' }} />
+						</div>
+						<div className="d-flex flex-column p-4">
+							<label htmlFor="voice-slider" className="me-2 pb-2">Configure voice</label>
+							<input type="range" className="mb-2 w-100" id="voice-slider" defaultValue="0" />
+							<div className="d-flex justify-content-between w-100">
+								<label htmlFor="voice-slider" className="me-2">Value 1</label>
+								<label htmlFor="voice-slider" className="ms-2">Value 2</label>
+							</div>
+						</div>
+						<div className="d-flex flex-column p-4">
+							<label htmlFor="voice-slider" className="me-2 pb-2">Configure voice</label>
+							<input type="range" className="mb-2 w-100" id="voice-slider" defaultValue="0" />
+							<div className="d-flex justify-content-between w-100">
+								<label htmlFor="voice-slider" className="me-2">Value 1</label>
+								<label htmlFor="voice-slider" className="ms-2">Value 2</label>
+							</div>
+						</div>
+						<div className="d-flex flex-column p-4">
+							<label htmlFor="voice-slider" className="me-2 pb-2">Configure voice</label>
+							<input type="range" className="mb-2 w-100" id="voice-slider" defaultValue="0" />
+							<div className="d-flex justify-content-between w-100">
+								<label htmlFor="voice-slider" className="me-2">Value 1</label>
+								<label htmlFor="voice-slider" className="ms-2">Value 2</label>
+							</div>
+						</div>
+						<div className="d-flex flex-column p-4">
+							<label htmlFor="voice-slider" className="me-2 pb-2">Configure voice</label>
+							<input type="range" className="mb-2 w-100" id="voice-slider" defaultValue="0" />
+							<div className="d-flex justify-content-between w-100">
+								<label htmlFor="voice-slider" className="me-2">Value 1</label>
+								<label htmlFor="voice-slider" className="ms-2">Value 2</label>
+							</div>
+						</div>
+						<div className="d-flex flex-column p-4">
+							<label htmlFor="voice-slider" className="me-2 pb-2">Configure voice</label>
+							<input type="range" className="mb-2 w-100" id="voice-slider" defaultValue="0" />
+							<div className="d-flex justify-content-between w-100">
+								<label htmlFor="voice-slider" className="me-2">Value 1</label>
+								<label htmlFor="voice-slider" className="ms-2">Value 2</label>
+							</div>
 						</div>
 						<div className="d-flex flex-column p-4">
 							<label htmlFor="voice-slider" className="me-2 pb-2">Configure voice</label>
