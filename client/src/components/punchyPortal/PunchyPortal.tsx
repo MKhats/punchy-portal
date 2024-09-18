@@ -1,33 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { ActionIcon, Button, Checkbox, Page } from 'components/core';
-import { useForm } from 'react-hook-form';
-import tannerOnboardingAPI from 'APICalls/tannerOnboardingAPI';
-import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { Button, Checkbox, Input, Page } from 'components/core';
 import { IconChevronLeft, IconChevronRight } from 'assets/icons';
-import { min, max } from 'lodash';
 
 const PunchyPortal = () => {
-	const navigate = useNavigate();
-	const [products, setProducts] = useState<ProductDTO[]>([]);
-	const [selectedProduct, setSelectedProduct] = useState<ProductDTO | null>(
-		null
-	);
 	const [isRightColumnVisible, setRightColumnVisible] =
-		useState<boolean>(false); // State for collapsible column
-
-	const { reset } = useForm();
-
-	useEffect(() => {
-		const fetchProducts = async () => {
-			const data = await tannerOnboardingAPI.products.getProducts();
-			data !== null
-				? setProducts(data)
-				: toast.error('Error Fetching Products');
-		};
-		fetchProducts();
-	}, []);
-
+		useState<boolean>(false);
 	const toggleRightColumn = () => {
 		setRightColumnVisible((prev) => !prev);
 	};
@@ -45,10 +22,9 @@ const PunchyPortal = () => {
 					</div>
 
 					{/* Center Column */}
-					<div className="col-6 d-flex align-items-center">
+					<div className="col-6 d-flex align-items-end pb-4">
 						<div className="w-100 p-3">
-							<h5>Center Column</h5>
-							<p>Content for the center column.</p>
+							<Input placeholder="Type question here..." />
 						</div>
 					</div>
 
